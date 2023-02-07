@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/all.css" />
+    <title>Crm</title>
+  </head>
+  <body>
+    <main>
+      <section class="gen">
+        <button class="bugrer" type="button">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <aside class="aside">
+          <div class="logo">
+            <img src="./assets/imgs/logo.png" alt="logo" class="logo__img" />
+            <span class="version">v.01</span>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list__item">
+                <a href="#">
+                  <img src="./assets/imgs/key.png" alt="" />
+                  Dashboard</a
+                >
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img src="./assets/imgs/square.png" alt="" />
+                  Product</a
+                >
+              </li>
+              <li class="nav__list__item active">
+                <a href="#">
+                  <img src="./assets/imgs/user.png" alt="" />
+                  Customers</a
+                >
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img src="./assets/imgs/wallet.png" alt="" />
+
+                  Income</a
+                >
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img src="./assets/imgs/discount.png" alt="" /> Promote</a
+                >
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img src="./assets/imgs/message.png" alt="" />
+                  Help</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="user">
+            <div class="user__img">
+              <img src="./assets/imgs/face.png" alt="Evano" />
+            </div>
+            <div class="user__info">
+              <p class="user__info__name">Evano</p>
+              <p class="user__info__position">Project Manager</p>
+            </div>
+          </div>
+        </aside>
+        <div class="content">
+          <div class="container">
+            <h1 class="title">Hello Evano 👋🏼,</h1>
+            <div class="dash-board">
+              <div class="info">
+                <h2 class="info__title">All Customers</h2>
+                <h4 class="info__status">Active Members</h4>
+              </div>
+              <div class="search">
+                <input
+                  type="search"
+                  placeholder="Search"
+                  class="search__input"
+                />
+              </div>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Company</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Cooper</td>
+                    <td>Microsoft</td>
+                    <td>(225) 555-0118</td>
+                    <td>jane@microsoft.com</td>
+                    <td>United States</td>
+                    <td><span class="status green">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Floyd Miles</td>
+                    <td>Yahoo</td>
+                    <td>(205) 555-0100</td>
+                    <td>floyd@yahoo.com</td>
+                    <td>Kiribati</td>
+                    <td><span class="status red">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ronald Richards</td>
+                    <td>Adobe</td>
+                    <td>(302) 555-0107</td>
+                    <td>ronald@adobe.com</td>
+                    <td>Israel</td>
+                    <td><span class="status red">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>Marvin McKinney</td>
+                    <td>Tesla</td>
+                    <td>(252) 555-0126</td>
+                    <td>marvin@tesla.com/td></td>
+                    <td>Iran</td>
+                    <td><span class="status green">Active</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>Jerome Bell</td>
+                    <td>Google</td>
+                    <td>(629) 555-0129</td>
+                    <td>jerome@google.com</td>
+                    <td>Réunion</td>
+                    <td><span class="status green">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Kathryn Murphy</td>
+                    <td>Microsoft</td>
+                    <td>(406) 555-0120</td>
+                    <td>kathryn@microsoft.com</td>
+                    <td>Curaçao</td>
+                    <td><span class="status green">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Kathryn Murphy</td>
+                    <td>Microsoft</td>
+                    <td>(406) 555-0120</td>
+                    <td>kathryn@microsoft.com</td>
+                    <td>Curaçao</td>
+                    <td><span class="status green">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Kristin Watson</td>
+                    <td>Facebook</td>
+                    <td>(704) 555-0127</td>
+                    <td>kristin@facebook.com</td>
+                    <td>Åland Islands</td>
+                    <td><span class="status red">Inactive</span></td>
+                  </tr>
+                </tbody>
+              </table>
+         
+              <div class="bot-content">
+                <p class="data">Showing data 1 to 8 of  256K entries</p>
+                <div class="paginator">
+                  <a href="#" class="paginator__item "><</a>
+                  <a href="#" class="paginator__item active">1</a>
+                  <a href="#" class="paginator__item">2</a>
+                  <a href="#" class="paginator__item">3</a>
+                  <a href="#" class="paginator__item">4</a>
+                  <span class="dotted">...</span>
+                  <a href="#" class="paginator__item">40</a>
+                  <a href="#" class="paginator__item">></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

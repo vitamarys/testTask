@@ -1,0 +1,425 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fafbff;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  max-width: 968px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.gen {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+.gen .bugrer {
+  display: none;
+}
+@media (max-width: 768px) {
+  .gen .bugrer {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 5;
+  }
+  .gen .bugrer .line {
+    width: 20px;
+    height: 5px;
+    background-color: #000000;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 3px;
+  }
+}
+.gen .aside {
+  padding: 38px 30px 80px 30px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  position: relative;
+}
+@media (max-width: 768px) {
+  .gen .aside {
+    padding: 15px 10px 20px 15px;
+    max-width: 100%;
+    position: absolute;
+    left: -100%;
+    min-height: calc(100vh - 100px);
+    transition: all 0.3s;
+    z-index: 4;
+  }
+  .gen .aside.active {
+    left: 0%;
+    transition: all 0.3s;
+    z-index: 4;
+  }
+}
+.gen .aside .logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: 52px;
+}
+.gen .aside .logo .version {
+  font-weight: 500;
+  font-size: 10px;
+  color: #838383;
+}
+.gen .aside .nav__list__item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.gen .aside .nav__list__item:nth-child(n+2) a {
+  position: relative;
+}
+.gen .aside .nav__list__item:nth-child(n+2) a::after {
+  content: url("../assets/imgs/arrow.png");
+  display: block;
+  position: absolute;
+  right: 15px;
+}
+.gen .aside .nav__list__item a {
+  display: flex;
+  padding: 15px 8px 15px 8px;
+  gap: 15px;
+  align-items: center;
+  color: #9197B3;
+}
+.gen .aside .nav__list__item.active {
+  background: #5932EA;
+}
+.gen .aside .nav__list__item.active a {
+  color: #FFFFFF;
+}
+.gen .aside .nav__list__item.active a::after {
+  filter: brightness(3);
+}
+.gen .aside .nav__list__item.active img {
+  filter: brightness(3);
+}
+.gen .aside .nav__list__item:hover {
+  background: #5932EA;
+}
+.gen .aside .nav__list__item:hover a {
+  color: #FFFFFF;
+}
+.gen .aside .nav__list__item:hover a::after {
+  filter: brightness(3);
+}
+.gen .aside .nav__list__item:hover img {
+  filter: brightness(3);
+}
+.gen .aside .user {
+  display: flex;
+  position: absolute;
+  padding: inherit;
+  left: 0;
+  bottom: 0;
+  gap: 10px;
+}
+.gen .aside .user__img {
+  width: 42px;
+  height: 42px;
+}
+.gen .aside .user__img img {
+  object-fit: contain;
+}
+.gen .aside .user__info__name {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.gen .aside .user__info__position {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.gen .content {
+  padding: 40px 66px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .gen .content {
+    padding: 40px 20px;
+  }
+}
+.gen .content .title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+.gen .content .dash-board {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  overflow: scroll;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 30px;
+  padding: 34px 40px 40px 38px;
+}
+@media (max-width: 768px) {
+  .gen .content .dash-board {
+    padding: 40px 20px;
+  }
+}
+.gen .content .dash-board .info__title {
+  font-weight: 600;
+  font-size: 22px;
+  color: #000000;
+  letter-spacing: -0.01em;
+  margin-bottom: 5px;
+}
+.gen .content .dash-board .info__status {
+  font-weight: 400;
+  font-size: 14px;
+  color: #16C098;
+}
+.gen .content .dash-board .search {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .gen .content .dash-board .search {
+    margin-top: 15px;
+  }
+}
+.gen .content .dash-board .search__input {
+  background: #F9FBFF;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 40px;
+  outline: none;
+  max-width: 228px;
+  height: fit-content;
+}
+.gen .content .dash-board .search__input::placeholder {
+  color: #B5B7C0;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Poppins";
+}
+.gen .content .dash-board .search::before {
+  content: url("../assets/imgs/search.png");
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 59%;
+  transform: translateY(-44%);
+}
+.gen .content .dash-board .table {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+@media (max-width: 768px) {
+  .gen .content .dash-board .table {
+    min-width: 950px;
+    overflow: scroll;
+  }
+}
+.gen .content .dash-board .table thead {
+  width: 100%;
+  position: relative;
+}
+.gen .content .dash-board .table thead::before {
+  content: "";
+  width: calc(100% + 78px);
+  height: 1px;
+  background-color: #EEEEEE;
+  position: absolute;
+  left: -38px;
+  bottom: 0;
+}
+.gen .content .dash-board .table thead tr th {
+  padding-bottom: 14px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  color: #B5B7C0;
+  letter-spacing: -0.01em;
+}
+.gen .content .dash-board .table thead tr th:nth-last-child(1) {
+  text-align: center;
+}
+.gen .content .dash-board .table tr {
+  border-bottom: 1px solid #EEEEEE;
+}
+.gen .content .dash-board .table tr td {
+  font-weight: 500;
+  font-size: 14px;
+  color: #292D32;
+  padding: 18.5px 0;
+}
+.gen .content .dash-board .table tr td:nth-last-child(1) {
+  text-align: center;
+}
+.gen .content .dash-board .table tr td .status {
+  display: block;
+  margin: 0 auto;
+  padding: 4px;
+  text-align: center;
+  width: 80px;
+  min-height: 29px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.gen .content .dash-board .table tr td .status.green {
+  color: #008767;
+  background: rgba(22, 192, 152, 0.38);
+  border: 1px solid #00B087;
+}
+.gen .content .dash-board .table tr td .status.red {
+  background: #FFC5C5;
+  border: 1px solid #DF0404;
+  color: #DF0404;
+}
+.gen .content .dash-board .bot-content {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .gen .content .dash-board .bot-content {
+    flex-direction: column-reverse;
+  }
+}
+.gen .content .dash-board .bot-content .data {
+  font-weight: 500;
+  font-size: 14px;
+  color: #B5B7C0;
+}
+.gen .content .dash-board .bot-content .paginator {
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .gen .content .dash-board .bot-content .paginator {
+    margin-bottom: 15px;
+  }
+}
+.gen .content .dash-board .bot-content .paginator__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  background: #F5F5F5;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+}
+.gen .content .dash-board .bot-content .paginator__item.active {
+  color: #FFFFFF;
+  background: #5932EA;
+}
+
+/*# sourceMappingURL=all.css.map */
